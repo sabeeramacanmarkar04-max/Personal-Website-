@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sabeera Macan Markar - FREE AS THE OCEAN!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --seafoam: #7FDBDA;
+                --teal: #20B2AA;
+                --deep-ocean: #0A4D68;
+                --midnight: #052F44;
+                --foam: #E0F7FA;
+                --sand: #F5E6C8;
+                --coral: #FF6B6B;
+                --white: #FFFFFF;
+            }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+    }
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(180deg, var(--deep-ocean) 0%, var(--midnight) 100%);
+    color: var(--foam);
+    line-height: 1.6;
+    overflow-x: hidden;
+
+}
+
+/* ==== NAVBAR ==== */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(5, 47, 68, 0.92);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(127, 219, 218, 0.2);
+}
+
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    color: var(--seafoam);
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--foam);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--seafoam);
+
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--seafoam);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ==== HERO ==== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 5% 4rem;
+    position: relative;
+    background:
+     radial-gradient(ellipse at 20% 50% rgba(32, 127, 170, 0.15) 0%, transparent 50%),
+     radial-gradient(ellipse at 80% 20% rgba(127, 219, 218, 0.1) 0%, transparent 40%),
+     linear-gradient(180deg, var(--deep-ocean) 0%, var(--midnight) 100%);
+}
+
+.hero .tagline {
+    font-size: 1.4rem;
+    color: var(--seafoam);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 1.15rem;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    background: var(--midnight);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 25px rgba(32, 178, 170, 0.3);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(32, 178, 170, 0.45);
+}
+
+/* Wave decoration */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23052F44' fill-opacity='1' d='M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,144C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+}
+
+/* ===== SECTION COMMON ===== */
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    color: var(--seafoam);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: rgba(224, 247, 250, 0.7);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+/* ==== ABOUT ME ==== */
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-me img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(127, 219, 218, 0.3);
+    object-fit: cover;
+    height: 420px;
+}
+
+.about-me-content h3 {
+    font-size: 1.6rem;
+    color: var(--seafoam);
+    margin-bottom: 1rem;
+}
+
+.about-me-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    
+}
+
+.traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.5rem;
+    }
+
+.trait {
+    background: rgba(32, 127, 170, 0.15);
+    border: 1px solid rgba(127, 219, 218, 0.4);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--seafoam);
+
+}
+
+/* ==== BLOG ==== */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background: rgba(5, 47, 68, 0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(127, 219, 218, 0.15);
+    padding: 1.8rem;
+    transition: border-color 0.3s;
+}
+
+.blog-card:hover {
+    border-color: var(--seafoam);
+}
+
+.blog-card .date {
+    font-size: 0.85rem;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+}
+
+.blog-card h3 {
+    color: var(--seafoam);
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
+
+.read-more {
+    color: var(--seafoam);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* ==== SILLY STUFF ==== */
+.silly {
+    background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(127, 219, 218, 0.05));
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    border: 1px dashed rgba(127, 219, 218, 0.34);
+}
+
+.silly h2 {
+    color: var(--seafoam);
+    margin-bottom: 1.5rem;
+}
+
+.fun-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.fact {
+    background: rgba(5, 47, 68, 0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-size: 1.05rem;
+}
+
+.fact span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    padding: 2.5rem 5%;
+    text-align: center;
+    background: var(--midnight);
+    font-size: 0.95rem;
+    opacity: 0.8;
+    border-top: 1px solid rgba(127, 219, 218, 0.2);
+}
+
+footer span {
+    color: var(--seafoam);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+    .about-grid, .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        gap: 1.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none; /* simple mobile: hide links for now */
+
+    }
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+    section {
+        padding: 3.5rem 5%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+     <nav>
+        <a href="#home" class="logo"> Sabeera </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#silly">Silly Stuff</a></li>
+        </ul>
+        
+
+     </nav>
+
+     <!-- HERO -->
+      <header class="hero" id="home">
+        <h1>Sabeer Macan Markar</h1>
+        <p class="tagling"> Free as the ocean • Loud as Luffy • Fast as Verstappen</p>
+        
+    <a href="#about-me" class="cta.btn"> Dive in!</a>
+    <div class="wave"></div>
+        
+      </header>
+
+      <!-- ABOUT ME -->
+       <section id="about-me">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle"> he human equivalent of a wave that never stops moving </p>
+        <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Ocean vibes" class="about-img">
+      <div class="about-content">
+        <h3>Hey, Im Sabeera!</h3>
+        <p>
+          Im the friend your friends warn you about before bringing me to public places. 
+          I talk to every stranger, try everything at least once, and somehow always end up 
+          doing something embarrassing… and I wouldnt change a thing.
+        </p>
+        <p>
+          My heart belongs to two things: the ocean and freedom. Surfing is pure therapy — 
+          just me, my soul, and the sea that doesnt care about achievements. 
+          When Im not chasing waves, youll find me building RC cars, painting, 
+          riding my bike, playing piano, or screaming at the TV during Formula 1 races 
+          (Max Verstappen is the GOAT, fight me).
+        </p>
+        <p>
+          And yes… One Piece is life. Luffy is my ultimate role model. 
+          Be free. Be kind. Be ridiculously loud about the things you love.
+        </p>
+        <div class="traits">
+          <span class="trait">🏄 Surfer</span>
+          <span class="trait">🏎️ F1 Addict</span>
+          <span class="trait">🏴‍☠️ One Piece Forever</span>
+          <span class="trait">🛠️ RC Builder</span>
+          <span class="trait">🎨 Painter</span>
+          <span class="trait">🎹 Piano</span>
+          <span class="trait">🌊 Ocean Child</span>
+          <span class="trait">🗣️ Professional Stranger-Talker</span>
+        </div>
+        </div>
+    </div>
+       </section>
+
+    <!-- BLOG -->
+     <section id="blog">
+        <h2 class="section-title">Random Thoughts & Blog</h2>
+        <p class="section-subtitle"> Half serious, half chaotic — just like me </p>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <article class="blog-card">
+                <p class="date">October 2025</p>
+                <h3>Why Luffy is the Best Role Model (Fight Me)</h3>
+                <p>He has zero plans, infinite friends, and somehow always wins. That's the energy I'm bringing into 2026..</p>
+                <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+            <div class="blog-card">
+                <article class="blog-card">
+                <p class="date">May 2024</p>
+                <h3>The Ocean Doesnt Care About Your GPA</h3>
+                <p>And thats exactly why I love it. A short love letter to surfing and stress-free living..</p>
+                <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+            <div class="blog-card">
+                <article class="blog-card">
+                <p class="date">August 2025</p>
+                <h3>Max Verstappen: The Human Rocket</h3>
+                <p>Why watching him drive feels like pure adrenaline and pure art at the same time.</p>
+                <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+        </div>
+     </section>
+    
+     <!-- SILLY STUFF -->
+      <section id="silly">
+        <div class="silly">
+            <h2> Silly stuff and Fun Facts!!</h2>
+            <p>Things my friends wish I wouldnt tell strangers… but I do anyway. </p>
+            <div class="fun-facts">
+        <div class="fact">
+          <span>🗣️</span>
+          I have talked to strangers in elevators, on trains, and once in a library (the librarian was not amused).
+        </div>
+        <div class="fact">
+          <span>🏴‍☠️</span>
+          I’ve cried during One Piece episodes more times than I’m willing to admit in public.
+        </div>
+        <div class="fact">
+          <span>🏎️</span>
+          I yell at the TV during F1 races like I’m the race engineer. My neighbors know Max’s name by now.
+        </div>
+        <div class="fact">
+          <span>🌊</span>
+          My ideal day: surf in the morning, build an RC car in the afternoon, play piano at night, and talk to at least three new people.
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+   <footer>
+    Made with 🌊 and pure freedom by <span>Sabeera Macan Markar</span> • Be free like Luffy • Drive like Max • Surf like the ocean is calling
+   </footer>
+</body>
+</html>
